@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>🎨 Gaurav's Art World</h1>
+        <p>Original Artworks & Custom Sketches</p>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Featured Artworks</h2>
+        <div class="grid">
+            <img src="images/art1.jpg" alt="Artwork 1">
+            <img src="images/art2.jpg" alt="Artwork 2">
+            <img src="images/art3.jpg" alt="Artwork 3">
+            <img src="images/art4.jpg" alt="Artwork 4">
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order">
+        <h2>Order Your Custom Art</h2>
+        <p>Want to buy an artwork or request a custom sketch? Click below:</p>
+        <button onclick="alert('Redirect to payment or order form!')">Buy Artwork</button>
+        <button onclick="alert('Open custom order form!')">Request Custom Sketch</button>
+    </section>
+
+    <!-- Footer Contact Form -->
+    <footer class="footer">
+        <h2>Contact the Artist</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>&copy; 2025 Gaurav's Art World</p>
+        <a href="https://www.instagram.com/gaurav_artz" target="_blank" class="instagram-link">
+            <i class="fab fa-instagram"></i> Follow on Instagram
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
