@@ -23,20 +23,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Form submit success message
+// Form submit success message with Formspree
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".footer form");
     const button = form.querySelector("button");
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); // stop default for testing
-        // If using Formspree, remove the line above
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // prevent default submit
 
-        button.innerText = "Message Sent Successfully ✅";
-        button.style.background = "#4CAF50"; // green color
-        button.disabled = true;
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
 
-        // If using Formspree, let it actually submit:
-        // form.submit();
+            if (response.ok) {
+                button.innerText = "Message Sent Successfully ✅";
+                button.style.background = "#4CAF50";
+                button.disabled = true;
+                form.reset();
+            } else {
+                button.innerText = "Error ❌ Try Again";
+                button.style.background = "#E74C3C";
+            }
+        } catch (error) {
+            button.innerText = "Network Error ❌";
+            button.style.background = "#E74C3C";
+        }
     });
 });
