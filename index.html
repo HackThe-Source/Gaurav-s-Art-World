@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Mitra">
+    <meta name="author" content="Harsh">
     <meta name="description" content="Landing page to showcase and sell artworks online.">
     <title>Artist Landing Page</title>
     <link rel="author" href="https://github.com/HackThe-Source">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon_io/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,7 +18,9 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1>🎨 Gaurav's Art World</h1>
+        <div class="enter-wrapper">
+            <h1 class="rgb-typing">🎨 Welcome to Gaurav's Art World</h1>
+        </div>
         <p>Original Artworks & Custom Sketches</p>
     </header>
 
@@ -37,8 +39,8 @@
     <section class="order">
         <h2>Order Your Custom Art</h2>
         <p>Want to buy an artwork or request a custom sketch? Click below:</p>
-        <button onclick="alert('Redirect to payment or order form!')">Buy Artwork</button>
-        <button onclick="alert('Open custom order form!')">Request Custom Sketch</button>
+        <button onclick="window.location.href='payment.html'">Buy Artwork</button>
+        <button onclick="window.location.href='order.html'">Request Custom Sketch</button>
     </section>
 
     <!-- Footer Contact Form -->
