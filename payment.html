@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Harsh">
+    <link rel="author" href="https://github.com/HackThe-Source">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Gaurav's Art World</title>
+    <style>
+        /* Background gradient */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffdd57;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        img {
+            width: 200px;
+            margin: 1rem auto;
+            border-radius: 12px;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        a.paybtn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        a.paybtn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .backbtn {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .backbtn:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p style="background: rgba(255, 87, 87, 0.2); 
+                  border: 1px solid #ff5757; 
+                  padding: 8px 12px; 
+                  border-radius: 8px; 
+                  font-weight: bold; 
+                  color: #f11717; 
+                  display: inline-block; 
+                  margin-bottom: 1rem;">
+            ⚠️ NOTE: Still in development...
+        </p>
+
+        <h2>✨ Complete Your Payment ✨</h2>
+        <p>Scan the QR code or click the button below to pay securely via Paytm UPI.</p>
+
+        <!-- Replace with your real QR image -->
+        <img src="paytm-qr.png" alt="Paytm QR Code">
+
+        <!-- Replace with your real Paytm/UPI link -->
+        <br>
+        <a class="paybtn" href="upi://pay?pa=your-upi-id@paytm&pn=Gaurav&am=500&cu=INR">
+            💳 Pay with Paytm
+        </a>
+
+        <br>
+        <a class="backbtn" href="index.html">⬅ Go Back to Home</a>
+    </div>
+
+</body>
+
+</html>
