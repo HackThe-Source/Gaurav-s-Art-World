@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -14,16 +14,91 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+    background: white;
     text-align: center;
     padding: 4rem 2rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Dancing Script', cursive;
     margin-bottom: 1rem;
+}
+
+.rgb-typing {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+    /* blinking cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    margin: 0 auto;
+    /* center the text container */
+    display: inline-block;
+    text-align: center;
+
+    /* Animations */
+    animation: typing 6s steps(30, end) forwards,
+        blink 0.7s step-end infinite,
+        rgbColors 6s linear infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* Cursor blinking */
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+/* RGB Gradient animation */
+@keyframes rgbColors {
+    0% {
+        color: #ff0000;
+    }
+
+    25% {
+        color: #00ff00;
+    }
+
+    50% {
+        color: #0000ff;
+    }
+
+    75% {
+        color: #ff00ff;
+    }
+
+    100% {
+        color: #ff0000;
+    }
+}
+
+/* Center container */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero p {
@@ -137,7 +212,7 @@ body {
 }
 
 .instagram-link {
-    display: inline-block;
+    display: block;
     margin-top: 10px;
     font-size: 1.2rem;
     color: #E4405F;
